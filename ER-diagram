@@ -1,0 +1,16 @@
+disease_data
+-
+serialnumber INT PK
+observationdate TIMESTAMP
+confirmed INT
+province VARCHAR(50)
+country VARCHAR(50)
+lastupdate TIMESTAMP
+
+Geographical_data
+-
+serialnumber INT PK FK > disease_data.serialnumber
+date TIMESTAMP 
+confirmed INT FK > disease_data.confirmed
+deaths INT
+recovered INT
