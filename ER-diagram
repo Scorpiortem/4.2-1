@@ -10,7 +10,6 @@ lastupdate TIMESTAMP
 Geographical_data
 -
 serialnumber INT PK FK > disease_data.serialnumber
-date TIMESTAMP 
-confirmed INT FK > disease_data.confirmed
-deaths INT
+date TIMESTAMP FK > disease_data.lastupdate 
+confirmed INT 
 recovered INT
