@@ -9,7 +9,8 @@ CREATE TABLE IF NOT EXISTS `Geographical_data` (
 );
 CREATE TABLE IF NOT EXISTS disease_data (
 	serialnumber INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    date TIMESTAMP NOT NULL REFERENCES Geografical_data(lastupdate),
+    date TIMESTAMP NOT NULL,
+    FOREIGN KEY(date) REFERENCES Geografical_data(lastupdate) ON DELETE CASCADE,
     confirmed INTEGER,
     deaths INTEGER,
     recovered INTEGER
