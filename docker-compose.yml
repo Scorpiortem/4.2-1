@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - PMA_HOST=mysql
+      - PMA_PORT=3306
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_USER: mysql_user  
+      MYSQL_PASSWORD: mysql_123456
+      MYSQL_DATABASE: COVID-19
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    command: --init-file /docker-entrypoint-initdb.d/COVID-19_db.sql & --init-file /docker-entrypoint-initdb.d/#########
