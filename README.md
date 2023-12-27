@@ -101,6 +101,24 @@
 
 ### Развернуть базу данных на web-сервере db4.net
 
+Этапы выполнения «Разверстка на WEB-сервере db4free.net»
+1)	Проходим регистрацию на сайте db4free.net
+2)	Вводим SQL-скрипт создания базы данных и создания таблицы в этой бд
+![image](https://github.com/Scorpiortem/4.2-1/assets/147144797/7f6a9279-84dc-46a8-934a-94b3205cc254)
+![image](https://github.com/Scorpiortem/4.2-1/assets/147144797/6f9d7a36-2f12-453f-9be5-4c7150a7b160)
+![image](https://github.com/Scorpiortem/4.2-1/assets/147144797/6a0acc2b-ef13-47d0-ba6a-8214b8ed53b8)
+ 
+ 
+3)	Затем импортируем csv файл 
+![image](https://github.com/Scorpiortem/4.2-1/assets/147144797/63c8289a-b7ab-41fc-8e94-4a20e6d776bc)
+![image](https://github.com/Scorpiortem/4.2-1/assets/147144797/1b72df6c-0634-4346-b1cb-e8e4c62df9b0)
+ 
+ 
+4)	Вводим SQL-скрипт для заполнения базы данных 
+К сожалению, на данном этапе произошла ошибка, спустя огромное количество попыток исправления найти решение не удалось
+![image](https://github.com/Scorpiortem/4.2-1/assets/147144797/ee500224-ad10-48ad-80a7-81cff1ce711b)
+
+
 ### Визуализация данных на Python
 > Работать я буду через Jupyter Notebook. Поэтому расширение файла у меня ipynb. Также я буду использовать самые популярные библиотеки для построения графиков.
 
