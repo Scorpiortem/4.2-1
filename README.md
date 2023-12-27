@@ -78,23 +78,24 @@
 
 1. Скачиваем файл, изучаем его содержимое.
 2. Начинаем транзакцию, в которой будет проходить заполнение базы.
-   ![image](https://github.com/Scorpiortem/4.2-1/assets/147314048/3772c212-3694-4f53-a085-dfc10ba1cda9)
 3. Создаём временную таблицу “temp_table”, и загружаем в неё все данные из файла с помощью оператора LOAD DATA INFILE.
    ![image](https://github.com/Scorpiortem/4.2-1/assets/147314048/ad827cb1-cbc3-4ec7-8f62-7a44585a3e09)
 4. Далее с помощью конструкции “INSERT INTO … SELECT FROM” поочерёдно загружаем данные из временной таблицы в таблицы нашей базы: ‘regions’, ‘countries’, ‘observations’.
    ![image](https://github.com/Scorpiortem/4.2-1/assets/147314048/8425bef2-24d4-4f6a-847a-1f77f498f20d)
-5. Завершаем транзакцию,сохраняя все изменения.
-   ![image](https://github.com/Scorpiortem/4.2-1/assets/147314048/df796a77-e867-4928-af64-d9ebfe5f1fb8)
+5. Завершаем транзакцию командой "commit",сохраняя все изменения.
    
 Проверка корректности работы кода:
 
 Выводим строки, в которых значение ‘recovered’ больше нуля. 
+
 ![image](https://github.com/Scorpiortem/4.2-1/assets/147314048/f7eeae6f-7d85-4bb4-a3e9-6153450b2b0b)
 
 Выводим строки из таблицы’observations’, в которых значение ‘confirmed’ больше 100, и добавляем название региона.
+
 ![image](https://github.com/Scorpiortem/4.2-1/assets/147314048/0abdc1eb-0fcd-4d26-831b-85907611c15d)
 
 Выводим строки таблицы ‘observations’ за июль 2020 года, в которых количество смертей равно нулю, и добавляем название страны.  
+
 ![image](https://github.com/Scorpiortem/4.2-1/assets/147314048/3d25ee91-79d1-4d0b-9e20-7908b68df165)
 ![image](https://github.com/Scorpiortem/4.2-1/assets/147314048/4d851ea3-3d81-400a-a5e0-2a27ca0a81e6)
 
